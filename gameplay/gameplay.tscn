@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdnyglk1i1cxl"]
+[gd_scene load_steps=5 format=3 uid="uid://b63g37lbv1enc"]
 
 [ext_resource type="Script" path="res://gameplay/gameplay.gd" id="1_thqv1"]
 [ext_resource type="Texture2D" uid="uid://bgprycbqd2tbx" path="res://assets/icon.svg" id="2_o7ako"]
-[ext_resource type="PackedScene" uid="uid://cko02oljhiby" path="res://paused/paused.tscn" id="3_w8wrl"]
 [ext_resource type="PackedScene" uid="uid://cee5dna3u27jf" path="res://assets/select_sfx.tscn" id="4_7kf0b"]
+[ext_resource type="PackedScene" uid="uid://gqfcqt4k0kn8" path="res://UIFramework/paused/paused.tscn" id="4_p2f48"]
 
 [node name="Gameplay" type="Node2D"]
 script = ExtResource("1_thqv1")
@@ -48,12 +48,7 @@ size_flags_horizontal = 4
 text = "View Template Source"
 uri = "https://github.com/brettchalupa/godot_skeleton"
 
-[node name="Paused" parent="." instance=ExtResource("3_w8wrl")]
-visible = false
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
-
 [node name="SelectSfx" parent="." instance=ExtResource("4_7kf0b")]
+
+[node name="Paused" parent="." instance=ExtResource("4_p2f48")]
+visible = false
